@@ -16,7 +16,7 @@ app.get('/factorial', (req, res) => {
 });
 
 app.get('/factorial/:number', (req, res) => {
-    res.send(`${factorial(req.params.number)}`);
+    res.send(`${factorial(parseInt(req.params.number))}`);
 });
 
 app.listen(port, () => console.log(`Server listening on port ${port}!`));
